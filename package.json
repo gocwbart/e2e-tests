@@ -1,9 +1,8 @@
 {
-  "name": "angular2-express-starter",
-  "version": "1.0.0",
-  "description": "Starter application of Angular2 with Express",
+  "name": "pulse-admin-v2",
+  "version": "0.0.1",
+  "description": "Pulse Admin v2",
   "main": "server/app.js",
-  "license": "MIT",
   "scripts": {
     "start": "concurrently --kill-others \"npm run _server:run\" \"ng serve --aot=true --progress=false --proxy-config proxy.conf.json\"",
     "lint:client": "ng lint",
@@ -15,10 +14,7 @@
     "_server:build": "tsc -p ./server",
     "postinstall": "npm run build"
   },
-  "author": "Vlado Tešanović",
-  "repository": {
-    "url": "https://github.com/vladotesanovic/angular2-express-starter"
-  },
+  "author": "Balboa Features",
   "private": true,
   "dependencies": {
     "@angular/cli": "^1.0.0",
