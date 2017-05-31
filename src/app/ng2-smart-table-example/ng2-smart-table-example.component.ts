@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Ng2SmartTableExampleComponent {
   settings = {
+    delete: {
+      confirmDelete: true,
+    },
+    add: {
+      confirmCreate: true,
+    },
+    edit: {
+      confirmSave: true,
+    },
     columns: {
       name: {
         title: 'Name'
@@ -17,6 +26,14 @@ export class Ng2SmartTableExampleComponent {
       company: {
         title: 'Company'
       }
+    },
+    hideHeader: true,
+    // hideSubHeader: true,
+    filter: {
+      inputClass: 'material-input'
+    },
+    pager: {
+      perPage: 5
     }
   };
 
@@ -46,4 +63,30 @@ export class Ng2SmartTableExampleComponent {
     { name: 'Dany', gender: 'Male', company: 'KFC' },
     { name: 'Molly', gender: 'Female', company: 'Burger King' }
   ];
+
+  onDeleteConfirm(event) {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  onSaveConfirm(event) {
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' (edited)';
+      event.confirm.resolve(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  onCreateConfirm(event) {
+    if (window.confirm('Are you sure you want to create?')) {
+      event.newData['name'] += ' (new)';
+      event.confirm.resolve(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+  }
 }
