@@ -27,11 +27,11 @@ export class Ng2SmartTableExampleComponent {
         title: 'Company'
       }
     },
-    hideHeader: true,
+    // hideHeader: true,
     // hideSubHeader: true,
-    filter: {
-      inputClass: 'material-input'
-    },
+    // filter: {
+    //   inputClass: 'material-input'
+    // },
     pager: {
       perPage: 5
     }
