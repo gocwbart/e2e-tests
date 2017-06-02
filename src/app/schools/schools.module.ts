@@ -4,13 +4,11 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { SchoolsComponent } from './schools.component';
 import { routing } from './schools.router';
-import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     NgxDatatableModule,
-    SharedModule,
     routing
   ],
   declarations: [

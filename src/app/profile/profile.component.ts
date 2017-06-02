@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { IAppState } from '../store/index';
 import { Observable } from 'rxjs/Observable';
+
+import { Http, Response } from '@angular/http';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html'
 })
 export class ProfileComponent {
+  user$: Observable<{}>;
 
-  profile$: Observable<{}>;
-
-  constructor(store: Store<IAppState>) {
-
-    this.profile$ = store.select('profile');
+  constructor(private http: Http) {
+    this.user$ = this.http.get('/api/user')
+      .map((response: Response) => response.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 }

@@ -5,7 +5,11 @@ Material Design Lite components:
 
 <mdl-textfield type="text" [(ngModel)]="theText" icon="bug_report"></mdl-textfield>
 
-<app-ui-top-navigation></app-ui-top-navigation>
+<ul class="topnav" #topnav>
+  <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+  <li><a routerLink="/schools" routerLinkActive="active">Schools</a></li>
+  <li><a routerLink="/smart-table" routerLinkActive="active">Smart Table</a></li>
+</ul>
 
 <div class="main">
   <router-outlet></router-outlet>

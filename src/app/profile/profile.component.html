@@ -1,8 +1,7 @@
 <h2>Profile</h2>
 
 <ul>
-  <li>{{(profile$ | async)?.name}}</li>
-  <li>{{(profile$ | async)?.username}}</li>
-  <li>{{(profile$ | async)?.email}}</li>
+  <li>{{(user$ | async)?.name}}</li>
+  <li>{{(user$ | async)?.username}}</li>
+  <li>{{(user$ | async)?.email}}</li>
 </ul>
-
