@@ -4,6 +4,7 @@ import * as express from "express";
 import * as path from "path";
 
 import { userRouter } from "./routes/user";
+import { schoolsRouter } from "./routes/schools";
 
 const app: express.Application = express();
 
@@ -15,6 +16,7 @@ app.use(urlencoded({ extended: true }));
 
 // api routes
 app.use("/api/user", userRouter);
+app.use("/api/schools", schoolsRouter);
 
 if (app.get("env") === "production") {
 
