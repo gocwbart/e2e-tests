@@ -1,4 +1,0 @@
-<h1>Weather module</h1>
-
-<p>Load city data by clicking on it. </p>
-<app-ui-city *ngFor="let city of cities" [image]="city.image" [name]="city.name" [longitude]="city.longitude" [latitude]="city.latitude" (onSelect)="loadCity($event)"></app-ui-city>
