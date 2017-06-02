@@ -1,3 +1,19 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+.css-class-red {
+  color: #cc0000 !important;
+}
+
+.css-class-green {
+  color: #00cc00 !important;
+}
+
+.css-class-blue {
+  color: #0000cc !important;
+}
+
 /* You can add global styles to this file, and also import other style files */
 $scss-variable: #c0ffee;
 

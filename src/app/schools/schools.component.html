@@ -1,0 +1,81 @@
+<h2 class="fdsafsd">Schools Table</h2>
+<div>
+  <h4>Available Columns</h4>
+  <ul>
+    <li *ngFor='let col of allColumns'>
+      <input
+        type='checkbox'
+        [id]="col.name"
+        (click)='toggleColumn(col)'
+        [checked]='isColumnChecked(col)'
+      />
+      <label [attr.for]="col.name">{{col.name}}</label>
+    </li>
+  </ul>
+</div>
+
+<ngx-datatable
+  class="material"
+  [columnMode]="'force'"
+  [selectionType]="'checkbox'"
+  [reorderable]="true"
+  [headerHeight]="'auto'"
+  [rowHeight]="'40'"
+  [footerHeight]="100"
+  [scrollbarH]="true"
+  [externalPaging]="true"
+  [externalSorting]="true"
+  [loadingIndicator]="isLoading"
+  [rowClass]="getRowClass"
+  [rows]="rows"
+  [columns]="columns"
+  [offset]="offset"
+  [limit]="limit"
+  [count]="count"
+  [selected]="selected"
+  (sort)="onSort($event)">
+
+  <ngx-datatable-footer>
+    <ng-template
+      ngx-datatable-footer-template
+      let-rowCount="rowCount"
+      let-pageSize="pageSize"
+      let-selectedCount="selectedCount"
+      let-curPage="curPage"
+      let-offset="offset">
+      <div style="padding: 5px 10px">
+        <div>
+          <button (click)="changeLimit(5)">Limit = 5</button>
+          <button (click)="changeLimit(10)">Limit = 10</button>
+          <button (click)="changeLimit(25)">Limit = 25</button>
+
+          <button (click)="prevPage()">Prev</button>
+          <button (click)="nextPage()">Next</button>
+        </div>
+        <hr style="width:100%" />
+        <div>
+          Rows: {{rowCount}} |
+          Size: {{pageSize}} |
+          Current: {{curPage}} |
+          Offset: {{offset}}
+        </div>
+      </div>
+    </ng-template>
+  </ngx-datatable-footer>
+</ngx-datatable>
+
+<div>
+  <h4>Sorts</h4>
+  <span>
+    {{sorts|json}}
+  </span>
+</div>
+
+<div>
+  <h4>Selected</h4>
+  <ul>
+    <li *ngFor='let selected of selected'>
+      {{selected|json}}
+    </li>
+  </ul>
+</div>
