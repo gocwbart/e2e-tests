@@ -4,6 +4,9 @@ import { Action } from '@ngrx/store';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/observable/of';
+
 import { USER_GET, USER_GET_FAIL, USER_GET_SUCCESS } from './profile.actions';
 
 @Injectable()

@@ -10,40 +10,6 @@ export class WeatherService {
   constructor(public http: Http) {}
 
   /**
-   * Air Quality Index
-   *
-   * @param longitude
-   * @param latitude
-   * @returns {Observable<Response>}
-   */
-  getAirQualityIndex(longitude: number, latitude: number): Observable<{}> {
-
-    return this.http.get(`https://simple-weather.p.mashape.com/aqi?lat=${latitude}&lng=${longitude}`, {
-      headers: new Headers({
-        'X-Mashape-Key': this.mashapeKey,
-        'Accept': 'text/plain'
-      })
-    });
-  }
-
-  /**
-   * Get current weather state
-   *
-   * @param longitude
-   * @param latitude
-   * @returns {Observable<Response>}
-   */
-  getCurrentWeather(longitude: number, latitude: number): Observable<{}> {
-
-    return this.http.get(`https://simple-weather.p.mashape.com/weather?lat=${latitude}&lng=${longitude}`, {
-      headers: new Headers({
-        'X-Mashape-Key': this.mashapeKey,
-        'Accept': 'text/plain'
-      })
-    });
-  }
-
-  /**
    * Get weather forecast
    *
    * @param longitude
