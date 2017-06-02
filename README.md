@@ -13,10 +13,6 @@ npm run start
 # Application ( epxress ) API: http://localhost:4300
 ```
 
-Install Redux DevTools chrome extenstion:
-
-https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
-
 ## Build / Production
 
 ```bash
