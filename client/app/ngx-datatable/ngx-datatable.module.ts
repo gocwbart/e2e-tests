@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { MdlModule } from '@angular-mdl/core';
 
-import { SchoolsComponent } from './schools.component';
-import { routing } from './schools.router';
+import { BackendDataService } from '../core/backendData.service';
+import { NgxDatatableComponent } from './ngx-datatable.component';
+import { routing } from './ngx-datatable.router';
 
 @NgModule({
   imports: [
@@ -13,11 +14,14 @@ import { routing } from './schools.router';
     MdlModule,
     routing
   ],
+  providers: [
+    BackendDataService
+  ],
   declarations: [
-    SchoolsComponent
+    NgxDatatableComponent
   ],
   bootstrap: [
-    SchoolsComponent
+    NgxDatatableComponent
   ]
 })
-export class SchoolsModule {}
+export class NgxDatatableExampleModule {}

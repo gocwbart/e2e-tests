@@ -2,6 +2,7 @@ import { Request, Response, Router } from "express";
 
 const schoolsRouter: Router = Router();
 
+// FIXME: For test purposes only :)
 schoolsRouter.get("/", (request: Request, response: Response) => {
   const limit = +request.query.limit || 10;
   const page = +request.query.page || 1;

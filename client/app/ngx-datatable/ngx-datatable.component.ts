@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { BackendDataService } from '../core/backendData.service'
 
 @Component({
-  selector: 'app-schools-table',
-  templateUrl: './schools.component.html'
+  selector: 'app-ngx-datatable-table',
+  templateUrl: './ngx-datatable.component.html'
 })
-export class SchoolsComponent {
+export class NgxDatatableComponent {
   isLoading:boolean = false;
   offset:number = 0;
   limit:number = 10;
@@ -15,7 +16,7 @@ export class SchoolsComponent {
   selected:Array<any>;
   sorts:Array<any>;
 
-  constructor() {
+  constructor(private backendDataService: BackendDataService) {
     this.allColumns = [
       {width: 40, sortable: false, canAutoResize: false, draggable: false, resizeable: false, checkboxable: true},
       {width: 200, name: 'School Name', prop: 'name', draggable: false},
@@ -35,22 +36,14 @@ export class SchoolsComponent {
   search(offset) {
     this.isLoading = true;
 
-    setTimeout(() => {
-      this.isLoading = false;
-      this.offset = offset;
-      this.count = 200;
-      this.rows = Array(this.limit)
-        .fill(offset * this.limit)
-        .map((num, index) => {
-          return {
-            name: 'item ' + (num + index),
-            students: Math.pow(num + index, 3),
-            classes: Math.pow(num + index, 2),
-            teachers: (num + index) % 8,
-            contentBundles: (num + index + 5) % 3
-          };
-        });
-    }, 1000);
+    this.backendDataService
+      .fetch('/api/schools')
+      .subscribe((schools) => {
+        this.isLoading = false;
+        this.offset = offset;
+        this.count = schools.count;
+        this.rows = schools.data;
+      });
   }
 
   changeLimit(newLimit:number) {
@@ -99,8 +92,6 @@ export class SchoolsComponent {
   }
 
   getCellClass({ row, column, value }): any {
-    console.log(row, column, value);
-
     return {
       'css-class-red': value === 0
     };

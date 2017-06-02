@@ -23,7 +23,6 @@ export class MdlTableComponent implements OnInit  {
     this.backendDataService
       .fetch('/api/schools')
       .subscribe((schools) => {
-        console.log(schools);
         this.tableModel.addAll(schools.data);
       });
   }
