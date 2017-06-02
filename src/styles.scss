@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+$scss-variable: #c0ffee;
+
 body {
-  background-color: #f8f8f8;
+  background-color: $scss-variable;
 }
 
 .loader {

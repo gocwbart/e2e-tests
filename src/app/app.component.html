@@ -1,9 +1,16 @@
+Material Design Lite components:
+<button mdl-button mdl-button-type="raised">
+  Button
+</button>
+
+<mdl-textfield type="text" [(ngModel)]="theText" icon="bug_report"></mdl-textfield>
+
 <app-ui-top-navigation></app-ui-top-navigation>
 
 <app-ui-sub-navigation [title]="(observable$ | async)?.title" [description]="(observable$ | async)?.text"></app-ui-sub-navigation>
 
 <div class="main">
   <router-outlet></router-outlet>
-</div>
+</div>gi
 
 <router-outlet name='modal'></router-outlet>
