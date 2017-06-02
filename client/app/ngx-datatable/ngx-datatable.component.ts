@@ -37,7 +37,7 @@ export class NgxDatatableComponent {
     this.isLoading = true;
 
     this.backendDataService
-      .fetch('/api/schools')
+      .fetch(`/api/schools?page=${offset + 1}&limit=${this.limit}`)
       .subscribe((schools) => {
         this.isLoading = false;
         this.offset = offset;
