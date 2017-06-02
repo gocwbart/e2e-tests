@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { MdlModule } from '@angular-mdl/core';
 
-import { SchoolsComponent } from './schools.component';
-import { routing } from './schools.router';
+import { MdlTableComponent } from './mdl-table.component';
+import { routing } from './mdl-table.router';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgxDatatableModule,
     MdlModule,
     routing
   ],
   declarations: [
-    SchoolsComponent
+    MdlTableComponent
   ],
   bootstrap: [
-    SchoolsComponent
+    MdlTableComponent
   ]
 })
-export class SchoolsModule {}
+export class MdlTableModule {}

@@ -1,18 +1,4 @@
-<h2>Schools Table</h2>
-<div>
-  <h4>Available Columns</h4>
-  <ul>
-    <li *ngFor='let col of allColumns'>
-      <input
-        type='checkbox'
-        [id]="col.name"
-        (click)='toggleColumn(col)'
-        [checked]='isColumnChecked(col)'
-      />
-      <label [attr.for]="col.name">{{col.name}}</label>
-    </li>
-  </ul>
-</div>
+<h2>Schools (Ngx Datatable)</h2>
 
 <ngx-datatable
   class="material"
@@ -45,12 +31,12 @@
       let-offset="offset">
       <div style="padding: 5px 10px">
         <div>
-          <button (click)="changeLimit(5)">Limit = 5</button>
-          <button (click)="changeLimit(10)">Limit = 10</button>
-          <button (click)="changeLimit(25)">Limit = 25</button>
+          <button mdl-button mdl-button-type="raised" (click)="changeLimit(5)">Limit = 5</button>
+          <button mdl-button mdl-button-type="raised" (click)="changeLimit(10)">Limit = 10</button>
+          <button mdl-button mdl-button-type="raised" (click)="changeLimit(25)">Limit = 25</button>
 
-          <button (click)="prevPage()">Prev</button>
-          <button (click)="nextPage()">Next</button>
+          <button mdl-button mdl-button-type="raised" (click)="prevPage()">Prev</button>
+          <button mdl-button mdl-button-type="raised" (click)="nextPage()">Next</button>
         </div>
         <hr style="width:100%" />
         <div>
@@ -64,15 +50,29 @@
   </ngx-datatable-footer>
 </ngx-datatable>
 
+
 <div>
-  <h4>Sorts</h4>
-  <span>
-    {{sorts|json}}
-  </span>
+  <h4>Available Columns</h4>
+  <ul>
+    <li *ngFor='let col of allColumns'>
+      <input
+        type='checkbox'
+        [id]="col.name"
+        (click)='toggleColumn(col)'
+        [checked]='isColumnChecked(col)'
+      />
+      <label [attr.for]="col.name">{{col.name}}</label>
+    </li>
+  </ul>
 </div>
 
 <div>
-  <h4>Selected</h4>
+  <h4>Chosen sort</h4>
+  {{sorts|json}}
+</div>
+
+<div>
+  <h4>Selected rows</h4>
   <ul>
     <li *ngFor='let selected of selected'>
       {{selected|json}}

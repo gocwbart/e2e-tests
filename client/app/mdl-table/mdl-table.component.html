@@ -1,0 +1,9 @@
+<h2>MdlTable</h2>
+
+<mdl-table-selectable mdl-shadow="2"
+                      [table-model]="tableModel"
+                      [table-model-selected]="selected"
+                      (table-model-selectionChanged)="selectionChanged($event)">
+</mdl-table-selectable>
+
+{{selected | json}}

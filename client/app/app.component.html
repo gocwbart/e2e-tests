@@ -1,16 +1,28 @@
-Material Design Lite components:
-<button mdl-button mdl-button-type="raised">
-  Button
-</button>
-
-<mdl-textfield type="text" [(ngModel)]="theText" icon="bug_report"></mdl-textfield>
-
-<ul class="topnav" #topnav>
-  <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-  <li><a routerLink="/schools" routerLinkActive="active">Schools</a></li>
-  <li><a routerLink="/smart-table" routerLinkActive="active">Smart Table</a></li>
-</ul>
-
-<div class="main">
-  <router-outlet></router-outlet>
+<div class="demo-container" mdl-shadow="2">
+  <mdl-layout mdl-layout-fixed-header mdl-layout-fixed-drawer>
+    <mdl-layout-header>
+      <mdl-layout-header-row>
+        <mdl-layout-title>Admin Panel v2</mdl-layout-title>
+        <mdl-layout-spacer></mdl-layout-spacer>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" >English</a>
+          <a class="mdl-navigation__link" >Sign Out</a>
+        </nav>
+      </mdl-layout-header-row>
+    </mdl-layout-header>
+    <mdl-layout-drawer>
+      <mdl-layout-title>Pearson</mdl-layout-title>
+      <nav class="mdl-navigation">
+        <a routerLink="/profile" routerLinkActive="active" class="mdl-navigation__link" >Profile</a>
+        <a routerLink="/schools" routerLinkActive="active" class="mdl-navigation__link" >Schools (Ngx Datatable)</a>
+        <a routerLink="/smart-table" routerLinkActive="active" class="mdl-navigation__link" >Smart Table</a>
+        <a routerLink="/mdl-table" routerLinkActive="active" class="mdl-navigation__link" >Mdl Table</a>
+      </nav>
+    </mdl-layout-drawer>
+    <mdl-layout-content>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+    </mdl-layout-content>
+  </mdl-layout>
 </div>
