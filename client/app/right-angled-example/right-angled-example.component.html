@@ -1,0 +1,89 @@
+<h2>Right Angled</h2>
+
+<div class="form-group">
+  <button class="mdl-button" (click)="tableData.reloadData()" [disabled]="tableData.busy">Reload</button>
+  <button class="mdl-button" (click)="tableData.cancelRequests()" [disabled]="tableData.ready">Cancel</button>
+  <button class="mdl-button" (click)="tableData.resetSettings()" [disabled]="tableData.busy">Reset sorts</button>
+</div>
+
+<table class="mdl-data-table" [rtList]="getData" [keepRecordsOnLoad]="true" #tableData="rtList">
+  <thead>
+    <tr>
+      <th></th>
+      <th rtSort="name">School</th>
+      <th rtSort="students">Students</th>
+      <th rtSort="teachers">Teachers</th>
+      <th rtSort="contentBundles">Content Bundles</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of tableData.items" rtSelectionArea>
+      <td>
+        <mdl-checkbox [mdl-ripple]="true" [(ngModel)]="item.selected"></mdl-checkbox>
+      </td>
+      <td>{{item.name}}</td>
+      <td>{{item.students}}</td>
+      <td>{{item.teachers}}</td>
+      <td>{{item.contentBundles}}</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <rt-status-no-data>
+          There are no data found
+        </rt-status-no-data>
+
+        <rt-status-request-cancelled>
+          Data loading was cancelled
+        </rt-status-request-cancelled>
+
+        <rt-status-failed>
+          An error has occured since the last data loading
+        </rt-status-failed>
+
+        <rt-status-initial>
+          Enter search options and press "Show" button
+        </rt-status-initial>
+
+        <rt-status-progress>
+          <mdl-progress [indeterminate]="true"></mdl-progress>
+        </rt-status-progress>
+
+        <rt-status-done>
+          <rt-paged-pager [defaultPageSize]="10" #rtPager>
+            <button class="mdl-button" [class.disabled]="!rtPager.canMoveBackward" (click)="rtPager.goToPreviousPage()">&laquo;</button>
+
+            <input rtSelectOnFocus rtPageNumber (keyup.enter)="rtPager.loadData()" type="text" class="form-control" maxlength="4" />
+
+            <button class="mdl-button" [class.disabled]="!rtPager.canMoveForward" (click)="rtPager.goToNextPage()">&raquo;</button>
+
+            <span>Displaying records {{rtPager.pager.displayFrom}} - {{rtPager.pager.displayTo}} of {{rtPager.pager.totalCount}}.</span>
+
+            <span>Page size</span>
+            <input rtSelectOnFocus rtPageSize (keyup.enter)="rtPager.loadData()" type="text" class="form-control" maxlength="3" />
+          </rt-paged-pager>
+        </rt-status-done>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <div *ngIf="sort">
+          Sort: <span *ngIf="sort.direction">-</span>{{ sort.fieldName }}
+        </div>
+
+        <div *ngIf="tableData.items.length">
+          Selection:
+          <div *ngFor="let item of tableData.items">
+            <mdl-checkbox [mdl-ripple]="true" [(ngModel)]="item.selected">
+              {{ item.name }}
+            </mdl-checkbox>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tfoot>
+</table>
