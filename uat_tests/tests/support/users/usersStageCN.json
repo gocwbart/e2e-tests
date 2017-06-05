@@ -1,0 +1,357 @@
+{
+  "center": {
+    "id": "cc103ed8-4a4e-4140-b196-b1d495e462ac"
+  },
+  "teacher1": {
+    "id": "086",
+    "name": "TEACHER1",
+    "lastName": "T1",
+    "login": "086.tensz.md",
+    "ssdsId": "E465275268",
+    "password": "Abcd123!",
+    "center": "Tencent SZ",
+    "userId": "d7cafff5-d577-43d9-aec2-1c657283dfea"
+  },
+  "teacher2": {
+    "id": "03",
+    "name": "TEACHER2",
+    "lastName": "T2",
+    "login": "086.tensz.il",
+    "ssdsId": "E461259017",
+    "password": "Abc123!2",
+    "center": "Tencent SZ"
+  },
+  "student":{
+    "comment": "used for smoke tests do not add any data"
+  },
+  "bookmarkStudent": {
+    "id": "34603",
+    "name": "Automatic",
+    "lastName": "Student2",
+    "login": "﻿tensz.34603.cn",
+    "ssdsId": "E471258380",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentWithoutGoals": {
+    "id": "34419",
+    "name": "Automatic",
+    "lastName": "Student1",
+    "login": "tensz.34419.cn",
+    "ssdsId": "E465582984",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentGoals": {
+    "id": "34420",
+    "name": "Automatic",
+    "lastName": "Student3",
+    "login": "tensz.34420.cn",
+    "ssdsId": "E465582987",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentForBookingClass": {
+    "id": "34421",
+    "name": "Automatic",
+    "lastName": "Student8",
+    "login": "tensz.34421.cn",
+    "ssdsId": "E465582988",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentProfile": {
+    "id": "34425",
+    "name": "Automatic",
+    "lastName": "Student8",
+    "login": "tensz.34425.cn",
+    "ssdsId": "E465583533",
+    "password": "Abc123!",
+    "center": "Tencent SZ",
+    "userId": "93e3dca3-9b28-4626-820c-9c6dc2e70848",
+    "consultant": "Teacher2 Green",
+    "contract": "All you can learn"
+  },
+  "studentForGE": {
+    "id": "34422",
+    "name": "Automatic",
+    "lastName": "Student6",
+    "login": "tensz.34422.cn",
+    "ssdsId": "E465582992",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentForOENC": {
+    "id": "34423",
+    "name": "Automatic",
+    "lastName": "Student7",
+    "login": "tensz.34423.cn",
+    "ssdsId": "E465582994",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "studentNotFromOnline": {
+    "id": "16674",
+    "name": "Automatic",
+    "lastName": "Student12",
+    "login": "bj3.16674.cn",
+    "ssdsId": "E476159446",
+    "password": "P@100603",
+    "center": "BJ3CM"
+  },
+  "iapStudent": {
+    "id": "34474",
+    "name": "Automatic",
+    "lastName": "Student10",
+    "login": "tensz.34474.cn",
+    "ssdsId": "E466137265",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "iapVideos": {
+    "id": "34620",
+    "name": "IapVideos",
+    "lastName": "Automatic",
+    "login": "tensz.34620.cn",
+    "ssdsId": "E471708953",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "nonCoreStudent": {
+    "id": "34545",
+    "name": "Automatic",
+    "lastName": "Student10",
+    "login": "tensz.34545.cn",
+    "ssdsId": "E466902573",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "nonCoreStudent2": {
+    "id": "34546",
+    "name": "Automatic",
+    "lastName": "Student12",
+    "login": "tensz.34546.cn",
+    "ssdsId": "E466902575",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "administrator": {
+    "id": "",
+    "name": "admin",
+    "lastName": "admin",
+    "login": "admin",
+    "ssdsId": "",
+    "password": "Nseadmin1",
+    "center": ""
+  },
+  "encounter1": {
+    "id": "34700",
+    "name": "Automatic",
+    "lastName": "Student13",
+    "login": "tensz.34700.cn",
+    "ssdsId": "E473159868",
+    "password": "Abc123!",
+    "Center": "Tencent SZ"
+  },
+  "encounter2": {
+    "id": "34701",
+    "name": "Automatic",
+    "lastName": "Student14",
+    "login": "tensz.34701.cn",
+    "ssdsId": "E473159870",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "encounter3": {
+    "id": "34702",
+    "name": "Automatic",
+    "lastName": "Student15",
+    "login": "tensz.34702.cn",
+    "ssdsId": "E473159872",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "digitStudent": {
+    "id": "34703",
+    "name": "Automatic",
+    "lastName": "Student16",
+    "login": "tensz.34703.cn",
+    "ssdsId": "E473159873",
+    "password": "Abc123!",
+    "center": "Tencent SZ"
+  },
+  "digitStudent2": {
+    "id": "34900",
+    "name": "Automatic",
+    "lastName": "Student17",
+    "login": "tensz.34900.cn",
+    "ssdsId": "E479116901",
+    "password": "Pass@123",
+    "center": "Tencent SZ"
+  },
+  "serviceManager": {
+    "id": "",
+    "name": "ADAM1",
+    "lastName": "LAFUZE",
+    "login": "086.tensz.al",
+    "ssdsId": "E155449362",
+    "password": "Pass@123",
+    "center": "Tencent SZ"
+  },
+  "SelfBookingStudentU2": {
+    "id": "34849",
+    "name": "Classes",
+    "lastName": "U2",
+    "login": "tensz.34849.cn",
+    "ssdsId": "E476820097",
+    "password": "Pass1234",
+    "Center": "Tencent SZ"
+  },
+  "BookedStudent": {
+    "id": "34850",
+    "name": "Student",
+    "lastName": "Booked",
+    "login": "tensz.34850.cn",
+    "ssdsId": "E476820150",
+    "password": "Pass1234",
+    "Center": "Tencent SZ"
+  },
+  "ChannelStudent": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": ""
+  },
+  "OnlineTeacher1": {
+    "id": "",
+    "name": "Sztigar",
+    "lastname": "Bonkoticzer",
+    "userId": "d582a17c-7b14-45a6-ac2a-078edd41a68f"
+  },
+  "OnlineTeacher2": {
+    "id": "",
+    "name": "Sehu",
+    "lastname": "Boy",
+    "userId": "7a6bab00-8cc0-4f84-b4c2-d9675669f6bf"
+  },
+  "OnlineTeacher3": {
+    "id": "",
+    "name": "Camel April",
+    "lastname": "Camel April",
+    "userId": "519a756c-f86a-4363-bb1c-6c936e538645"
+  },
+  "OnlineTeacher4": {
+    "id": "",
+    "name": "Camelmay",
+    "lastname": "Camel",
+    "userId": "3e4d127e-44c9-404c-a53e-ccac0dc962a7"
+  },
+  "OnlineTeacher5": {
+    "id": "",
+    "name": "Camelmay_2",
+    "lastname": "Camel",
+    "userId": "d5bf5238-dfd9-4a24-a400-eb4802fcc9e9"
+  },
+  "LimitedServiceManager": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "LabTeacher": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "Director": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "LimitedCenterDirector": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "LimitedServiceManager2": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "serviceManager2": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "serviceManager3": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "ChannelSM": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "ChannelTeacher": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": "",
+    "userId": ""
+  },
+  "studentJohnson": {
+    "id": "",
+    "name": "",
+    "lastName": "",
+    "login": "",
+    "ssdsId": "",
+    "password": "",
+    "center": ""
+  }
+}

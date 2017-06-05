@@ -1,3 +1,4 @@
+//noinspection TypeScriptCheckImport
 import { browser, element, by } from 'protractor';
 
 export class TmpPage {
