@@ -3,7 +3,7 @@
 <div class="form-group">
   <button class="mdl-button" (click)="tableData.reloadData()" [disabled]="tableData.busy">Reload</button>
   <button class="mdl-button" (click)="tableData.cancelRequests()" [disabled]="tableData.ready">Cancel</button>
-  <button class="mdl-button" (click)="tableData.resetSettings()" [disabled]="tableData.busy">Reset sorts</button>
+  <button class="mdl-button" (click)="tableData.resetSettings()" [disabled]="tableData.busy">Reset sorts and pagination</button>
 </div>
 
 <table class="mdl-data-table" [rtList]="getData" [keepRecordsOnLoad]="true" #tableData="rtList">
@@ -13,7 +13,7 @@
       <th rtSort="name">School</th>
       <th rtSort="students">Students</th>
       <th rtSort="teachers">Teachers</th>
-      <th rtSort="contentBundles">Content Bundles</th>
+      <th *ngIf="showContentBundles" rtSort="contentBundles">Content Bundles</th>
     </tr>
   </thead>
 
@@ -25,13 +25,13 @@
       <td>{{item.name}}</td>
       <td>{{item.students}}</td>
       <td>{{item.teachers}}</td>
-      <td>{{item.contentBundles}}</td>
+      <td *ngIf="showContentBundles">{{item.contentBundles}}</td>
     </tr>
   </tbody>
 
   <tfoot>
     <tr>
-      <td colspan="5">
+      <td [attr.colspan]="showContentBundles ? 5 : 4">
         <rt-status-no-data>
           There are no data found
         </rt-status-no-data>
@@ -66,21 +66,23 @@
             <input rtSelectOnFocus rtPageSize (keyup.enter)="rtPager.loadData()" type="text" class="form-control" maxlength="3" />
           </rt-paged-pager>
         </rt-status-done>
-      </td>
-    </tr>
 
-    <tr>
-      <td colspan="5">
-        <div *ngIf="sort">
-          Sort: <span *ngIf="sort.direction">-</span>{{ sort.fieldName }}
-        </div>
+        <div>
+          <mdl-checkbox [mdl-ripple]="true" [(ngModel)]="showContentBundles">
+            Show Content Bundles
+          </mdl-checkbox>
 
-        <div *ngIf="tableData.items.length">
-          Selection:
-          <div *ngFor="let item of tableData.items">
-            <mdl-checkbox [mdl-ripple]="true" [(ngModel)]="item.selected">
-              {{ item.name }}
-            </mdl-checkbox>
+          <div *ngIf="sort">
+            Sort: <span *ngIf="sort.direction">-</span>{{ sort.fieldName }}
+          </div>
+
+          <div *ngIf="tableData.items.length">
+            Selection:
+            <div *ngFor="let item of tableData.items">
+              <mdl-checkbox [mdl-ripple]="true" [(ngModel)]="item.selected">
+                {{ item.name }}
+              </mdl-checkbox>
+            </div>
           </div>
         </div>
       </td>

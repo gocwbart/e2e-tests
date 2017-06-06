@@ -10,13 +10,12 @@ import { BackendDataService } from '../core/backendData.service'
 })
 export class RightAngledExampleComponent  {
   sort: string;
+  showContentBundles: boolean = false;
 
   constructor(private backendDataService: BackendDataService) {
   }
 
   getData = (params) => {
-    console.log(params);
-
     this.sort = params.sortings[0];
 
     return this.backendDataService
