@@ -36,7 +36,13 @@
   },
   "lint": [
     {
-      "project": "client/tsconfig.app.json"
+      "files": "client/**/*.ts",
+      "project": "client/tsconfig.app.json",
+      "exclude": [
+        "client/app/mdl-table/**/*",
+        "client/app/ngx-datatable/**/*",
+        "client/app/right-angled-example/**/*"
+      ]
     },
     {
       "project": "client/tsconfig.spec.json"

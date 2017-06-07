@@ -3,8 +3,8 @@ import * as compression from "compression";
 import * as express from "express";
 import * as path from "path";
 
-import { userRouter } from "./routes/user";
 import { schoolsRouter } from "./routes/schools";
+import { userRouter } from "./routes/user";
 
 const app: express.Application = express();
 

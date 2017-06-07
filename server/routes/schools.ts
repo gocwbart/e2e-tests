@@ -12,11 +12,11 @@ schoolsRouter.get("/", (request: Request, response: Response) => {
       const schoolId = num + index;
 
       return {
-        name: 'School ' + schoolId,
+        name: "School " + schoolId,
         students: Math.pow(schoolId, 3),
         classes: Math.pow(schoolId, 2),
         teachers: schoolId % 8,
-        contentBundles: (schoolId + 5) % 3
+        contentBundles: (schoolId + 5) % 3,
       };
     });
 
