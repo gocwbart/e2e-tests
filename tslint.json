@@ -4,36 +4,10 @@
   ],
   "extends": [
     "tslint:recommended",
-    "codelyzer"
+    "codelyzer",
+    "./tslint.common.json"
   ],
   "rules": {
-    "curly": false,
-    "import-blacklist": [
-      true,
-      "rxjs"
-    ],
-    "max-line-length": [true, 140],
-    "member-ordering": [true,
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
-    ],
-    "no-duplicate-variable": true,
-    "no-use-before-declare": true,
-    "object-literal-sort-keys": false,
-    "one-line": [true,
-      "check-open-brace",
-      "check-catch",
-      "check-else",
-      "check-whitespace"
-    ],
-    "quotemark": [true, "single"],
-    "semicolon": true,
-    "trailing-comma": false,
-    "triple-equals": true,
-    "variable-name": false,
-
-
     "directive-selector": [true, "attribute", "app", "camelCase"],
     "component-selector": [true, "element", "app", "kebab-case"],
     "use-input-property-decorator": true,
