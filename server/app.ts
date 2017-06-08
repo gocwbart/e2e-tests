@@ -3,8 +3,8 @@ import * as compression from "compression";
 import * as express from "express";
 import * as path from "path";
 
-import { userRouter } from "./routes/user";
-import { schoolsRouter } from "./routes/schools";
+import { usersRouter } from "./routes/users.router";
+import { schoolsRouter } from "./routes/schools.router";
 
 const app: express.Application = express();
 
@@ -15,7 +15,7 @@ app.use(compression());
 app.use(urlencoded({ extended: true }));
 
 // api routes
-app.use("/api/user", userRouter);
+app.use("/api/users", usersRouter);
 app.use("/api/schools", schoolsRouter);
 
 if (app.get("env") === "production") {

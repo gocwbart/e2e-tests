@@ -13,7 +13,7 @@ export class ProfileComponent  {
   user$: Observable<{}>;
 
   constructor(private http: Http) {
-    this.user$ = this.http.get('/api/user')
+    this.user$ = this.http.get('/api/users/1')
       .map((response: Response) => response.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
