@@ -26,7 +26,7 @@ module.exports = function (config) {
       'text/x-typescript': ['ts','tsx']
     },
     istanbulThresholdReporter: {
-      src: 'coverage/coverage-final.json',
+      src: 'coverage/client/coverage-final.json',
       reporters: ['text'],
       thresholds: {
         global: {
@@ -44,7 +44,8 @@ module.exports = function (config) {
       }
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'json' ],
+      dir: 'coverage/client',
+      reports: ['html', 'json', 'text-summary'],
       fixWebpackSourcePaths: true
     },
     angularCli: {
@@ -56,8 +57,7 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    autoWatch: true
   });
 };
