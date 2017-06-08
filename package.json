@@ -7,7 +7,7 @@
     "start": "concurrently --kill-others \"npm run _server:run\" \"ng serve --aot=true --progress=false --proxy-config proxy.conf.json\"",
     "lint": "echo '====== CHECK CLIENT-SIDE ======' && npm run lintClient && echo '====== CHECK SERVER-SIDE ======' && npm run lintServer",
     "lintClient": "ng lint --format stylish --force true",
-    "lintServer": "tslint './server/**/*.ts' -c ./server/tslint.json --format stylish --force true",
+    "lintServer": "tslint './server/**/*.ts' -c ./tslint.server.json --format stylish --force true",
     "test:client": "ng test",
     "e2e:client": "ng e2e",
     "build": "ng build --prod --sm=false --aot=true --output-path=dist/client && npm run _server:build",

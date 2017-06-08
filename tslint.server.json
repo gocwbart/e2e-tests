@@ -1,6 +1,6 @@
 {
   "extends": [
     "tslint:recommended",
-    "../tslint.common.json"
+    "./tslint.common.json"
   ]
 }
