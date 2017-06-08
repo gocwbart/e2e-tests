@@ -10,10 +10,9 @@ export class BackendDataService {
   constructor(private http: Http) {
   }
 
-  fetch(url:string) {
+  fetch(url: string) {
     return this.http.get(url)
       .map((response: Response) => response.json())
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
-
 }
