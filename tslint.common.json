@@ -1,0 +1,37 @@
+{
+  "rules": {
+    "curly": false,
+    "import-blacklist": [
+      true,
+      "rxjs"
+    ],
+    "max-line-length": [
+      true,
+      140
+    ],
+    "member-ordering": [
+      true,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "no-duplicate-variable": true,
+    "no-use-before-declare": true,
+    "object-literal-sort-keys": false,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": true,
+    "trailing-comma": false,
+    "triple-equals": true,
+    "variable-name": false
+  }
+}
