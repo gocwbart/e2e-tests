@@ -15,6 +15,6 @@ export class ProfileComponent  {
   constructor(private http: Http) {
     this.user$ = this.http.get('/api/users/1')
       .map((response: Response) => response.json())
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 }
