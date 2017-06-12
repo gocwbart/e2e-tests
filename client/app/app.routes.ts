@@ -3,7 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'schools'},
-  { loadChildren: 'app/schools/schools.module#SchoolsModule', path: 'schools' },
+  { path: 'schools', loadChildren: 'app/schools/schools.module#SchoolsModule' },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(
