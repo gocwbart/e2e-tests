@@ -42,13 +42,16 @@
         "client/app/mdl-table/**/*",
         "client/app/ngx-datatable/**/*",
         "client/app/right-angled-example/**/*"
-      ]
+      ],
+      "tslintConfig": "./tslint.client.json"
     },
     {
-      "project": "client/tsconfig.spec.json"
+      "project": "client/tsconfig.spec.json",
+      "tslintConfig": "./tslint.client.json"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "e2e/tsconfig.e2e.json",
+      "tslintConfig": "./tslint.client.json"
     }
   ],
   "test": {
