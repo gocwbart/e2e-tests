@@ -1,5 +1,5 @@
-import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'profile'},

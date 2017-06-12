@@ -1,5 +1,5 @@
+import { IMdlTableModelItem, MdlDefaultTableModel } from '@angular-mdl/core';
 import { Component } from '@angular/core';
-import { MdlDefaultTableModel, IMdlTableModelItem } from '@angular-mdl/core';
 
 export interface ITableItem extends IMdlTableModelItem {
   name: string;
@@ -12,10 +12,10 @@ export interface ITableItem extends IMdlTableModelItem {
   templateUrl: './schools.component.html'
 })
 export class SchoolsComponent {
-  tableModel:MdlDefaultTableModel;
+  public tableModel: MdlDefaultTableModel;
 
   constructor() {
-    const tableData:[ITableItem] = [
+    const tableData: [ITableItem] = [
       {
         name: 'School A',
         students: 100,
@@ -32,21 +32,21 @@ export class SchoolsComponent {
 
     this.tableModel = new MdlDefaultTableModel([
       {
-        key:'name',
-        name:'Name',
-        sortable:true
+        key: 'name',
+        name: 'Name',
+        sortable: true
       },
       {
-        key:'students',
-        name:'Students',
-        sortable:true,
-        numeric:true
+        key: 'students',
+        name: 'Students',
+        sortable: true,
+        numeric: true
       },
       {
-        key:'classes',
-        name:'Classes',
-        sortable:true,
-        numeric:true
+        key: 'classes',
+        name: 'Classes',
+        sortable: true,
+        numeric: true
       }
     ]);
 

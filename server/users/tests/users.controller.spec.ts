@@ -1,5 +1,7 @@
-import * as sinon from 'sinon';
+/* tslint:disable:no-unused-expression */
+
 import { expect } from 'chai';
+import * as sinon from 'sinon';
 import UserController from '../users.controller';
 
 describe('User Controller', () => {

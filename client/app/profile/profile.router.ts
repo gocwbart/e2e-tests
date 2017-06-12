@@ -1,5 +1,5 @@
-import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile.component';
 
 const routes: Route[] = [

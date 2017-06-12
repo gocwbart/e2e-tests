@@ -8,6 +8,8 @@ import * as http from 'http';
 import { app } from '../app';
 import { serverPort } from '../config';
 
+/* tslint:disable */
+
 /**
  * Get port from environment and store in Express.
  */
