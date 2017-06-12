@@ -1,8 +1,15 @@
-import { Router } from "express";
-import UsersController from '../controllers/users.controller';
+import { Router } from 'express';
 
 const usersRouter: Router = Router();
 
-usersRouter.get("/:id", UsersController.get);
+function getUser(req, res) {
+  return res.json({
+    name: 'John Smith',
+    email: 'john.smith@pearson.com',
+    role: 'admin'
+  });
+}
+
+usersRouter.get("/:id", getUser);
 
 export { usersRouter };
