@@ -1,0 +1,6 @@
+options:
+  # Raise an error if more than 50 warnings are generated
+  max-warnings: 50
+
+files:
+  include: './client/styles/**/*.scss'

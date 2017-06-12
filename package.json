@@ -7,24 +7,20 @@
     "start": "concurrently --kill-others \"npm run _serverRun\" \"ng serve --aot=true --progress=false --proxy-config proxy.conf.json\"",
     "build": "ng build --prod --sm=false --aot=true --output-path=dist/client && npm run _serverBuild",
     "check": "npm run lint && npm run test",
-
-    "lint": "echo '====== CHECK CLIENT-SIDE ======' && npm run lintClient && echo '====== CHECK SERVER-SIDE ======' && npm run lintServer",
+    "lint": "echo '====== CHECK CLIENT-SIDE ======' && npm run lintClient && echo '====== CHECK SERVER-SIDE ======' && npm run lintServer && echo '====== CHECK STYLES ======' && npm run lintStyles",
     "test": "echo '====== TESTS CLIENT-SIDE ======' && npm run testClientCover && echo '====== TESTS SERVER-SIDE ======' && npm run testServerCover",
-
     "lintClient": "ng lint --format stylish --force true",
     "lintServer": "tslint './server/**/*.ts' -c ./tslint.server.json --format stylish --force true",
-
+    "lintStyles": "sass-lint -c .sass-lint.yml -v -q",
     "testClient": "ng test --single-run=true",
     "testClientCover": "ng test --single-run=true --code-coverage",
     "testClientWatch": "ng test --watch",
     "testServer": "mocha -r ts-node/register server/**/*.spec.ts",
     "testServerCover": "nyc npm run testServer",
     "testServerWatch": "mocha -r ts-node/register server/**/*.spec.ts --watch-extensions ts --watch",
-
     "e2eClient": "ng e2e",
     "_serverRun": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
     "_serverBuild": "tsc -p ./server",
-
     "postinstall": "npm run build"
   },
   "author": "Balboa Features",
@@ -83,6 +79,7 @@
     "nodemon": "1.11.0",
     "nyc": "^11.0.2",
     "protractor": "5.1.2",
+    "sass-lint": "^1.10.2",
     "sinon": "^2.3.2",
     "webdriver-manager": "12.0.6"
   }
