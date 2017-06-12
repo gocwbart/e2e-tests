@@ -33,11 +33,7 @@
     {
       "files": "client/**/*.ts",
       "project": "client/tsconfig.app.json",
-      "exclude": [
-        "client/app/mdl-table/**/*",
-        "client/app/ngx-datatable/**/*",
-        "client/app/right-angled-example/**/*"
-      ],
+      "exclude": [],
       "tslintConfig": "./config/tslint/tslint.client.json"
     },
     {

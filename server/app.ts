@@ -3,8 +3,6 @@ import * as compression from 'compression';
 import * as express from 'express';
 import * as path from 'path';
 
-import { usersRouter } from './users/users.router';
-
 const app: express.Application = express();
 
 app.disable('x-powered-by');
@@ -12,9 +10,6 @@ app.disable('x-powered-by');
 app.use(json());
 app.use(compression());
 app.use(urlencoded({ extended: true }));
-
-// api routes
-app.use('/api/users', usersRouter);
 
 if (app.get('env') === 'production') {
 
