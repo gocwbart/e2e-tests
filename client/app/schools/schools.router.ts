@@ -1,11 +1,11 @@
 import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import { RightAngledExampleComponent } from './right-angled-example.component';
+import { SchoolsComponent } from './schools.component';
 
 const routes: Route[] = [
   {
     path: '',
-    component: RightAngledExampleComponent
+    component: SchoolsComponent
   }
 ];
 

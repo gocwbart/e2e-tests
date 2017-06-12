@@ -1,8 +1,0 @@
-<h2>angular-generic-table</h2>
-
-<button class="mdl-button" (click)="myTable.exportCSV()">Export to CSV</button>
-<generic-table #myTable [gtClasses]="'mdl-data-table'" [gtSettings]="configObject.settings" [gtFields]="configObject.fields" [gtData]="configObject.data"></generic-table>
-
-<div class="text-center">
-  <gt-pagination [gtClasses]="'mdl-button'" [genericTable]="myTable"></gt-pagination>
-</div>
