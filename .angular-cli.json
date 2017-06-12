@@ -38,11 +38,11 @@
         "client/app/ngx-datatable/**/*",
         "client/app/right-angled-example/**/*"
       ],
-      "tslintConfig": "./tslint.client.json"
+      "tslintConfig": "./config/tslint/tslint.client.json"
     },
     {
       "project": "client/tsconfig.spec.json",
-      "tslintConfig": "./tslint.client.json"
+      "tslintConfig": "./config/tslint/tslint.client.json"
     }
   ],
   "test": {
