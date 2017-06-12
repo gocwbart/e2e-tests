@@ -12,28 +12,44 @@ export interface ITableItem extends IMdlTableModelItem {
   templateUrl: './schools.component.html'
 })
 export class SchoolsComponent {
-  tableModel = new MdlDefaultTableModel([
-    {key:'name', name:'Name', sortable:true},
-    {key:'students', name:'Students', sortable:true, numeric:true},
-    {key:'classes', name:'Classes', sortable:true, numeric:true}
-  ]);
-
-  tableData:[ITableItem] = [
-    {
-      name: 'School A',
-      students: 100,
-      classes: 3,
-      selected: false
-    },
-    {
-      name: 'School B',
-      students: 100,
-      classes: 3,
-      selected: false
-    }
-  ];
+  tableModel:MdlDefaultTableModel;
 
   constructor() {
-    this.tableModel.addAll(this.tableData);
+    const tableData:[ITableItem] = [
+      {
+        name: 'School A',
+        students: 100,
+        classes: 3,
+        selected: false
+      },
+      {
+        name: 'School B',
+        students: 100,
+        classes: 3,
+        selected: false
+      }
+    ];
+
+    this.tableModel = new MdlDefaultTableModel([
+      {
+        key:'name',
+        name:'Name',
+        sortable:true
+      },
+      {
+        key:'students',
+        name:'Students',
+        sortable:true,
+        numeric:true
+      },
+      {
+        key:'classes',
+        name:'Classes',
+        sortable:true,
+        numeric:true
+      }
+    ]);
+
+    this.tableModel.addAll(tableData);
   }
 }

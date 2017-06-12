@@ -29,11 +29,6 @@
       }
     }
   ],
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
   "lint": [
     {
       "files": "client/**/*.ts",
@@ -47,10 +42,6 @@
     },
     {
       "project": "client/tsconfig.spec.json",
-      "tslintConfig": "./tslint.client.json"
-    },
-    {
-      "project": "e2e/tsconfig.e2e.json",
       "tslintConfig": "./tslint.client.json"
     }
   ],

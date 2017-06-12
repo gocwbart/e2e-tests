@@ -18,7 +18,6 @@
     "testServer": "mocha -r ts-node/register server/**/*.spec.ts",
     "testServerCover": "nyc npm run testServer",
     "testServerWatch": "mocha -r ts-node/register server/**/*.spec.ts --watch-extensions ts --watch",
-    "e2eClient": "ng e2e",
     "_serverRun": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
     "_serverBuild": "tsc -p ./server",
     "postinstall": "npm run build"
@@ -71,7 +70,6 @@
     "mocha": "^3.4.2",
     "nodemon": "1.11.0",
     "nyc": "^11.0.2",
-    "protractor": "5.1.2",
     "sass-lint": "^1.10.2",
     "sinon": "^2.3.2",
     "webdriver-manager": "12.0.6"
