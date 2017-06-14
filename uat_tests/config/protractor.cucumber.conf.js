@@ -24,6 +24,7 @@ exports.config = {
     ],
     cucumberOpts: {
         format: 'pretty',
+		tags: ['@test1'],
         require: ['../tests/step_definitions/*.js',
             '../tests/step_definitions/**/*.js',
             '../tests/support/methods/testHooks.js']
