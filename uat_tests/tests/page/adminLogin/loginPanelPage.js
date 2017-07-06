@@ -8,19 +8,19 @@ var self = Page.create({
 
     usernameInput:{
         get: () => {
-            return element (self.by.xpath('//*[@id="inputEmail"]'));
+            return element (self.by.id('inputEmail'));
         }
     },
 
     passwordInput:{
         get: () => {
-            return element (self.by.xpath('//*[@id="inputPassword"]'));
+            return element (self.by.id('inputPassword'));
         }
     },
 
     loginButton:{
         get: () => {
-            return element (self.by.xpath('//*[@type="submit"] '));
+            return element (self.by.className('btn btn-lg btn-info btn-block'));
         }
     },
 

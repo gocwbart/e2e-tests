@@ -6,13 +6,13 @@ var world = require('../../../uat_tests/config/world.js'),
 var loginSteps = function () {
     var loginPage = pages.loginPage;
 
-    this.Given(/^I login to PulseAdminPanel as "([^"]*)" user$/, function (user, callback) {
+     this.Given(/^I login to PulseAdminPanel as "([^"]*)" user$/, function (user, callback) {
 
         var userData = config.config.users[user];
 
         browser.get(config.config.baseUrl)
             .then(() => {
-                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 9000)
+                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 9999)
             })
             .then(function () {
                 loginPage.writePassword(userData.password);

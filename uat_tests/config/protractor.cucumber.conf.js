@@ -19,11 +19,12 @@ exports.config = {
     specs: ['./uat_tests/tests/features/**/**.feature'],
 
     multiCapabilities: [
-		{browserName: 'chrome',chromeOptions: {  'args': ['--test-type', 'show-fps-counter=true', '--web-security=no spec.js', '--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'],'prefs': {'download': {'prompt_for_download': false,'default_directory': '/home/gocwbart/GitRepo/bf-admin-pulse/uat_tests/tests/support/downloads'}},},}
+		{browserName: 'chrome',chromeOptions: {  'args': ['--test-type', 'show-fps-counter=true', '--web-security=no spec.js', '--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'],'prefs': {'download': {'prompt_for_download': false,'default_directory': 'C:\\gocwbart\\bf-admin-pulse\\uat_tests\\tests\\support\\downloads'}},},}
 
     ],
     cucumberOpts: {
         format: 'pretty',
+		tags: ['@test1'],
         require: ['../tests/step_definitions/*.js',
             '../tests/step_definitions/**/*.js',
             '../tests/support/methods/testHooks.js']

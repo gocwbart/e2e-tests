@@ -5,7 +5,7 @@
     "testUsers": "../tests/support/users/usersStageCN.json"
   },
 
-  "pulsePanelAdmin_v1": {
+  "pulseAdmin_v1": {
     "baseUrl": "http://www.stage.pulse.pearson.com/admin/",
     "apiUrl": "",
     "testUsers": "../tests/support/users/usersAdminPanel_v1.json"
