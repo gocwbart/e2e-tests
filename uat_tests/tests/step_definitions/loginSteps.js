@@ -12,7 +12,7 @@ var loginSteps = function () {
 
         browser.get(config.config.baseUrl)
             .then(() => {
-                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 9999)
+                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 5000)
             })
             .then(function () {
                 loginPage.writePassword(userData.password);
@@ -26,7 +26,6 @@ var loginSteps = function () {
             });
 
     });
-
 
 };
 
