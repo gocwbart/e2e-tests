@@ -1,5 +1,57 @@
 module.exports = function (grunt) {
     'use strict';
+
+    var configOptions = {
+        config: {
+            src: "./config/grunt/*.js"
+        },
+        appConfig: {
+            PATH: 'app',
+            DIST: 'dist',
+            MOBILE_DIST: 'mobile-dist'
+        },
+        timestamp: new Date().getTime(),
+        bower: grunt.file.readJSON('bower.json'),
+        protractor: {
+            cucumber: {
+                options: {
+                    configFile: 'uat_tests/config/protractor.cucumber.conf.js',
+                    testJSONDirectory: 'uat_test/reports/json',
+                    keepAlive: true
+                }
+            }
+        },
+        selenium_standalone: {
+            options: {
+                stopOnExit: true
+            },
+            e2e: {
+                seleniumVersion: '2.53.1',
+                seleniumDownloadURL: 'http://selenium-release.storage.googleapis.com',
+                drivers: {
+                    chrome: {
+                        version: '2.28',
+                        baseURL: 'http://chromedriver.storage.googleapis.com'
+                    },
+                    ie: {
+                        version: '2.53.1',
+                        arch: 'ia32',
+                        baseURL: 'http://selenium-release.storage.googleapis.com'
+                    }
+                }
+            }
+        },
+        'protractor-cucumber-html-report': {
+            default_options: {
+                options: {
+                    dest: 'uat_tests/reports',
+                    output: 'report.html',
+                    testJSONDirectory: 'uat_tests/reports/json'
+                }
+            }
+        }
+    };
+
     var extend = require('extend');
     grunt.initConfig({
         clean: {
@@ -10,7 +62,7 @@ module.exports = function (grunt) {
         protractor: {
             cucumber: {
                 options: {
-                    configFile: 'uat_tests/config/protractor.cucumber.conf.js',
+                    configFile: './uat_tests/config/protractor.cucumber.conf.js',
                     testJSONDirectory: 'uat_test/reports/json',
                     keepAlive: true
                 }
@@ -94,9 +146,17 @@ module.exports = function (grunt) {
         }
     });
 
+    var configs = require('load-grunt-configs')(grunt, configOptions);
+    require('load-grunt-tasks')(grunt);
+
+    grunt.loadTasks('config/grunt/testsTasks');
+
+    configs.app = configOptions.appConfig;
+    configs.pkg = grunt.file.readJSON('package.json');
+
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-template');
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-selenium-standalone');
-    grunt.loadTasks('uat_tests/config/grunt_config');
+    grunt.loadTasks('uat_tests/config/grunt');
 };
