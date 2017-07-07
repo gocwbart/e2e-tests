@@ -5,14 +5,14 @@ exports.config = {
     directConnect: false,
     framework: 'custom',
     frameworkPath: '../../node_modules/protractor-cucumber-framework',
-    useAllAngular2AppRoots: true,
+ //   useAllAngular2AppRoots: true,
 
     seleniumArgs: [],
     seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
     jsonReportsDirOutput: 'uat_tests/reports/json',
-    baseUrl: 'http://www.stage.pulse.pearson.com/admin/',
-    users: require('../tests/support/users/usersAdminPanel_v1.json'),
-    apiUrl: '',
+    baseUrl: 'https://stageworld.wallstreetenglish.com.cn',
+    users: require('../tests/support/users/usersStageCN.json'),
+    apiUrl: 'https://stageworld.wallstreetenglish.com.cn/api/',
 
     verbose: true,
 
@@ -24,10 +24,11 @@ exports.config = {
     ],
     cucumberOpts: {
         format: 'pretty',
-		tags: ['@test2'],
+		tags: ['@test1'],
         require: ['../tests/step_definitions/*.js',
             '../tests/step_definitions/**/*.js',
-            '../tests/support/methods/testHooks.js']
+            '../tests/support/methods/testHooks.js',
+            'env.js']
     },
 
     // If you want run more than one browser (For maxSession uncomment also browser Firefox and IE )

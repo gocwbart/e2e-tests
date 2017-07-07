@@ -1,16 +1,16 @@
 var myStepDefinitionsWrapper = function () {
 
     this.Given(/^I did sth$/, function (callback) {
-        callback.pending();
+        callback();
     });
 
 
     this.When(/^I do sth more$/, function (callback) {
-        callback.pending();
+        callback();
     });
 
     this.Then(/^I will get sth more$/, function (callback) {
-        callback.pending();
+        callback();
     });
 };
 module.exports = myStepDefinitionsWrapper;

@@ -5,7 +5,7 @@ exports.config = {
     directConnect: false,
     framework: 'custom',
     frameworkPath: '../../node_modules/protractor-cucumber-framework',
-    useAllAngular2AppRoots: true,
+ //   useAllAngular2AppRoots: true,
 
     seleniumArgs: [],
     seleniumAddress: '<%= seleniumAddress %>',
@@ -25,7 +25,8 @@ exports.config = {
         format: '<%= format %>',
         require: ['../tests/step_definitions/*.js',
             '../tests/step_definitions/**/*.js',
-            '../tests/support/methods/testHooks.js']
+            '../tests/support/methods/testHooks.js',
+            'env.js']
     },
 
     // If you want run more than one browser (For maxSession uncomment also browser Firefox and IE )
