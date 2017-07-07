@@ -4,8 +4,14 @@
     "apiUrl": "https://stageworld.wallstreetenglish.com.cn/api/",
     "testUsers": "../tests/support/users/usersStageCN.json"
   },
-
   "pulseAdmin_v1": {
+    "baseUrl": "https://www.stage.pulse.pearson.com/admin",
+    "apiUrl": "",
+    "testUsers": "../tests/support/users/usersAdminPanel_v1.json"
+  },
+
+
+  "pulseAdmin_v2": {
     "baseUrl": "https://app-01.demo1.aws-eu-wi.pls.elt.hosts.pearson-intl.net/#/login",
     "apiUrl": "",
     "testUsers": "../tests/support/users/usersAdminPanel_v1.json"

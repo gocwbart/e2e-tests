@@ -1,6 +1,6 @@
 var pageCollection = (function () {
 
-    var loginPage = require('../tests/page/adminLogin/loginPanelPage.js');
+    var loginPage = require('../tests/page/adminLogin/loginPage.js');
 
 
     return {

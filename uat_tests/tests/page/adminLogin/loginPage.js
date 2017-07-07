@@ -8,13 +8,13 @@ var self = Page.create({
 
     usernameInput:{
         get: () => {
-            return element (self.by.id('mdl-textfield-0'));
+            return element (self.by.id('inputEmail'));
         }
     },
 
     passwordInput:{
         get: () => {
-            return element (self.by.id('mdl-textfield-1'));
+            return element (self.by.id('inputPassword'));
         }
     },
 

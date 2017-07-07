@@ -2,10 +2,10 @@ console.log(this.options);
 config = require('../config/protractor.cucumber.conf.js');
 
 exports.config = {
-    directConnect: false,
     framework: 'custom',
+    directConnect: false,
     frameworkPath: '../../node_modules/protractor-cucumber-framework',
- //   useAllAngular2AppRoots: true,
+    useAllAngular2AppRoots: true,
 
     seleniumArgs: [],
     seleniumAddress: '<%= seleniumAddress %>',
@@ -13,6 +13,18 @@ exports.config = {
     baseUrl: '<%= baseUrl %>',
     users: require('<%= usersJSONPath %>'),
     apiUrl: '<%= apiUrl %>',
+
+    onPrepare: function () {
+        browser.driver.manage().window().maximize();
+        var disableNgAnimate = function () {
+            angular
+                .module('disableAnimate', [])
+                .run(['$animate', function ($animate) {
+                    $animate.enabled(false)
+                }]);
+        };
+        browser.addMockModule('disableNgAnimate', disableNgAnimate);
+    },
 
     verbose: true,
 

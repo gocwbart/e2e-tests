@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
     var configOptions = {
         config: {
-            src: "./config/grunt/*.js"
+            src: "./config/grunt/*.js",
         },
         appConfig: {
             PATH: 'app',
@@ -54,6 +54,14 @@ module.exports = function (grunt) {
 
     var extend = require('extend');
     grunt.initConfig({
+        versioncheck: {
+            target: {
+                options: {
+                    skip : ["semver", "npm", "lodash"],
+                    hideUpToDate : false
+                }
+            }
+        },
         clean: {
             e2eReport: {
                 src: ['./uat_tests/reports']
@@ -114,6 +122,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+
         template: {
             protractor: {
                 options: {
@@ -149,11 +158,13 @@ module.exports = function (grunt) {
     var configs = require('load-grunt-configs')(grunt, configOptions);
     require('load-grunt-tasks')(grunt);
 
-    grunt.loadTasks('config/grunt/testsTasks');
+    //grunt.loadTasks('config/grunt/testsTasks');
+    grunt.loadTasks('config/grunt');
 
     configs.app = configOptions.appConfig;
     configs.pkg = grunt.file.readJSON('package.json');
 
+    grunt.loadNpmTasks('grunt-version-check');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-template');
     grunt.loadNpmTasks('grunt-protractor-runner');

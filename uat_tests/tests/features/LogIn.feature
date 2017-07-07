@@ -5,4 +5,4 @@ Feature: Admin panel page
   
   @test1
 Scenario: valid credentials
-  	Given I login to PulseAdminPanel as "adminUser" user
+  	Given I login to PulseAdminPanel as "bookmarkStudent" user

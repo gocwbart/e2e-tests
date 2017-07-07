@@ -9,19 +9,18 @@ var loginSteps = function () {
      this.Given(/^I login to PulseAdminPanel as "([^"]*)" user$/, function (user, callback) {
 
         var userData = config.config.users[user];
-
-        browser.get(config.config.baseUrl)
+         browser.get(config.config.baseUrl)
             .then(() => {
-                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 5000)
+                return browser.wait(world.EC.presenceOf(loginPage.usernameInput), 9000)
             })
-            .then(function () {
+            .then(() => {
                 loginPage.writePassword(userData.password);
                 return loginPage.writePassword(userData.password);
             })
-            .then(function () {
+            .then(() => {
                 return loginPage.clickLoginButton();
             })
-            .then(function () {
+            .then(() => {
                 callback();
             });
 

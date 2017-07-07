@@ -2,33 +2,12 @@
   "center": {
     "id": "cc103ed8-4a4e-4140-b196-b1d495e462ac"
   },
-  "teacher1": {
-    "id": "086",
-    "name": "TEACHER1",
-    "lastName": "T1",
-    "login": "086.tensz.md",
-    "ssdsId": "E465275268",
-    "password": "Abcd123!",
-    "center": "Tencent SZ",
-    "userId": "d7cafff5-d577-43d9-aec2-1c657283dfea"
-  },
-  "teacher2": {
-    "id": "03",
-    "name": "TEACHER2",
-    "lastName": "T2",
-    "login": "086.tensz.il",
-    "ssdsId": "E461259017",
-    "password": "Abc123!2",
-    "center": "Tencent SZ"
-  },
-  "student":{
-    "comment": "used for smoke tests do not add any data"
-  },
-  "bookmarkStudent": {
+
+   "bookmarkStudent": {
     "id": "34603",
     "name": "Automatic",
     "lastName": "Student2",
-    "login": "﻿tensz.34603.cn",
+    "login": "tensz.34603.cn",
     "ssdsId": "E471258380",
     "password": "Abc123!",
     "center": "Tencent SZ"
